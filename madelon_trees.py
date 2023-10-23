@@ -37,7 +37,7 @@ for i in x:
 # Creating a Data frame with train/test missclassification error vs. max depth
 df = pd.DataFrame()
 df['Depth'], df['Train Error'], df['Test Error'] = (x, train_er, test_er)
-print(df) #
+print(df)
 
 # Plotting the above data frame
 plt.plot(x, train_er, x, test_er, marker='.')
