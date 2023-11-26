@@ -1,4 +1,4 @@
-# Machine-Learning-HW1
+# Machine-Learning-Trees-&-Forests
 Machine learning project working with Decision Trees and Random Forests.
 
 
