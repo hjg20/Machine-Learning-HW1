@@ -8,18 +8,12 @@ from sklearn.metrics import accuracy_score
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 
-X = pd.read_csv('./Data/satimage/X.dat', 
-                         delimiter=' ', 
-                         header=None)
-y = pd.read_csv('./Data/satimage/Y.dat', 
-                header=None)
-Xt = pd.read_csv('./Data/satimage/Xtest.dat', 
-                         delimiter=' ', 
-                         header=None)
-yt = pd.read_csv('./Data/satimage/Ytest.dat', 
-                header=None)
+X = pd.read_csv('./Data/satimage/X.dat', delimiter=' ', header=None)
+y = pd.read_csv('./Data/satimage/Y.dat', header=None)
+Xt = pd.read_csv('./Data/satimage/Xtest.dat', delimiter=' ', header=None)
+yt = pd.read_csv('./Data/satimage/Ytest.dat', header=None)
 
-x = [_+1 for _ in range(12)]
+x = range(1, 13)
 train_er = []
 test_er = []
 
@@ -41,7 +35,7 @@ print(df) #
 plt.plot(x, train_er, x, test_er, marker='.')
 plt.xlabel('Tree Depth')
 plt.ylabel('Misclassification Error')
-plt.title('Madelon Tree Depth vs. Missclassification Error')
+plt.title('Satimages Tree Depth vs. Missclassification Error')
 train_label = mpatches.Patch(color='blue', label='Train')
 test_label = mpatches.Patch(color='orange', label='Test')
 plt.legend(handles=[train_label, test_label], loc='upper right')

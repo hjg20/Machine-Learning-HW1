@@ -21,7 +21,7 @@ Xt = Xt.drop(Xt.columns[-1], axis=1)
 yt = pd.read_csv('./Data/MADELON/madelon_valid.labels', 
                 header=None)
 
-x = [_+1 for _ in range(12)]
+x = range(1, 13)
 train_er = []
 test_er = []
 
